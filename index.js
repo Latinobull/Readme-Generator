@@ -28,7 +28,7 @@ const readMePrompt = () =>
     },
     {
       type: "input",
-      message: "Who are the contributers to the project?",
+      message: "What are the contributings to the project?",
       name: "contr",
     },
     {
@@ -63,8 +63,29 @@ const readMePrompt = () =>
       message: "What is your email address?",
       name: "email",
     },
+    {
+      type: "input",
+      message: "What is your first and last name?",
+      name: "nameFL",
+    },
   ]);
-const ReadMeString = (sentence) => ``;
+const ReadMeString = (sentence) => `
+# ${sentence.title}
+${sentence.desc}
+# Installation
+${sentence.install}
+# Usage
+${sentence.usage}
+# Contributing
+${sentence.contr}
+# Test
+${sentence.test}
+## Questions
+If you have any questions, feel free to email me at ${sentence.email}.
+### Credits
+Github: www.github.com/${sentence.username}
+Copyright ${sentence.nameFL}. All Rights Reserved.
+`;
 
 readMePrompt()
   .then((post) => {

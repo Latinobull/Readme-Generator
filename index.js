@@ -66,4 +66,11 @@ const readMePrompt = () =>
   ]);
 const ReadMeString = (sentence) => ``;
 
-readMePrompt().then((post) => console.log(post));
+readMePrompt()
+  .then((post) => {
+    console.log(post);
+    return writeReadMe("README.md", ReadMeString(post));
+  })
+
+  .then(() => console.log("You're Readme file is ready"))
+  .then((err) => console.error(err));

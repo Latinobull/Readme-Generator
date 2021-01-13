@@ -1,4 +1,3 @@
 #Files ignored
 node_modules/
 package-lock.json/
-package-lock.json $ git rm --cached package-lock.json rm package-lock.json $ git commit -m Start ignoring package-lock.json

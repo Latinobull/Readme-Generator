@@ -56,10 +56,15 @@ const readMePrompt = () =>
       },
       {
         type: "input",
-        message: "ghg",
-        name: "joe",
+        message: "What is your Github username?",
+        name: "username",
+      },
+      {
+        type: "input",
+        message: "What is your email address?",
+        name: "email",
       },
     ])
-    .then((post) => console.log(post.license));
+    .then((post) => console.log(post));
 
 readMePrompt();

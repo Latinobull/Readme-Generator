@@ -72,6 +72,13 @@ const readMePrompt = () =>
 const ReadMeString = (sentence) => `
 # ${sentence.title}
 ${sentence.desc}
+# Tables of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+* [Credits](#credits)
 # Installation
 ${sentence.install}
 # Usage
@@ -80,9 +87,9 @@ ${sentence.usage}
 ${sentence.contr}
 # Test
 ${sentence.test}
-## Questions
+# Questions
 If you have any questions, feel free to email me at ${sentence.email}.
-### Credits
+# Credits
 Github: www.github.com/${sentence.username}
 Copyright ${sentence.nameFL}. All Rights Reserved.
 `;
@@ -94,4 +101,4 @@ readMePrompt()
   })
 
   .then(() => console.log("You're Readme file is ready"))
-  .then((err) => console.error(err));
+  .catch((err) => console.error(err));

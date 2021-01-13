@@ -11,5 +11,39 @@ const readMePrompt = () =>
       message: "What is the title of the project?",
       name: "title",
     },
-    {},
+    {
+      type: "input",
+      message: "What is the title of the project?",
+      name: "title",
+    },
+    {
+      type: "input",
+      message: "What is the title of the project?",
+      name: "title",
+    },
+    {
+      type: "input",
+      message: "What is the title of the project?",
+      name: "title",
+    },
+    {
+      type: "input",
+      message: "What is the title of the project?",
+      name: "title",
+    },
+    {
+      type: "input",
+      message: "What is the title of the project?",
+      name: "title",
+    },
+    {
+      type: "input",
+      message: "What is the title of the project?",
+      name: "title",
+    },
+    {
+      type: "input",
+      message: "What is the title of the project?",
+      name: "title",
+    },
   ]);

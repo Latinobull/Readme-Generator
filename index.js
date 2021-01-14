@@ -70,7 +70,7 @@ const readMePrompt = () =>
     },
   ]);
 const ReadMeString = (sentence) => `
-# ${sentence.title}
+# ${sentence.title} ${badge}
 ${sentence.desc}
 # Tables of Contents
 * [Installation](#installation)
@@ -97,6 +97,13 @@ Copyright ${sentence.nameFL}. All Rights Reserved.
 readMePrompt()
   .then((post) => {
     console.log(post);
+    if ((post.license = "MIT")) {
+      badge =
+        "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    } else if ((post.license = "Mozilla")) {
+      badge =
+        "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+    }
     return writeReadMe("README.md", ReadMeString(post));
   })
 

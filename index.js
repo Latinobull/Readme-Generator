@@ -103,6 +103,30 @@ readMePrompt()
     } else if ((post.license = "Mozilla")) {
       badge =
         "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+    } else if ((post.license = "Boost")) {
+      badge =
+        "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
+    } else if ((post.license = "Apache")) {
+      badge =
+        "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+    } else if ((post.license = "BSD")) {
+      badge =
+        "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+    } else if ((post.license = "Eclipse")) {
+      badge =
+        "[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)";
+    } else if ((post.license = "GNU")) {
+      badge =
+        "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+    } else if ((post.license = "IBM")) {
+      badge =
+        "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)";
+    } else if ((post.license = "Perl")) {
+      badge =
+        "[![License: Artistic-2.0](https://img.shields.io/badge/License-Perl-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)";
+    } else {
+      badge =
+        "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)";
     }
     return writeReadMe("README.md", ReadMeString(post));
   })

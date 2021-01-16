@@ -1,10 +1,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-
 const writeReadMe = util.promisify(fs.writeFile);
 var badge;
-var isLicense = `${post.license} is the licensed used in this project`;
+var isLicense;
 const readMePrompt = () =>
   inquirer.prompt([
     {
@@ -100,6 +99,7 @@ Copyright ${sentence.nameFL}. All Rights Reserved.
 readMePrompt()
   .then((post) => {
     console.log(post.license);
+    isLicense = `${post.license} is the licensed used in this project`;
     if (post.license == "MIT") {
       badge =
         "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";

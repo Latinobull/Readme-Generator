@@ -4,6 +4,7 @@ const util = require("util");
 
 const writeReadMe = util.promisify(fs.writeFile);
 var badge;
+var isLicense;
 const readMePrompt = () =>
   inquirer.prompt([
     {
@@ -87,6 +88,8 @@ ${sentence.usage}
 ${sentence.contr}
 # Test
 ${sentence.test}
+# License 
+${isLicense}
 # Questions
 If you have any questions, feel free to email me at ${sentence.email}.
 # Credits

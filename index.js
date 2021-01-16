@@ -4,7 +4,7 @@ const util = require("util");
 
 const writeReadMe = util.promisify(fs.writeFile);
 var badge;
-var isLicense;
+var isLicense = `${post.license} is the licensed used in this project`;
 const readMePrompt = () =>
   inquirer.prompt([
     {
@@ -130,6 +130,7 @@ readMePrompt()
     } else {
       badge =
         "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)";
+      isLicense = "There are no licenses for this project";
     }
     return writeReadMe("README.md", ReadMeString(post));
   })
